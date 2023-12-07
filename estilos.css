@@ -1,0 +1,566 @@
+/* Enlaza el CSS con una fuente externa de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Zona de variables CSS */
+:root {
+    /* Paleta de colores */
+    --color1: #ec3929;
+    --color2: #e9ec29;
+    --color3: #c8d4e2;
+    --color4: #FFFFFF;
+    --color5: #000000;
+    --color6: #2a69b8;
+
+    /* Fuentes */
+    --fuente1: 'Poppins';
+    --fuente2: sans-serif;
+}
+
+/* 1) Selector de estilos universal de elementos  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2) Selector de estilo de tipo HTML */
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--fuente1), var(--fuente2);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(42,105,184,0.6);
+    font-weight: 200;
+    text-transform: lowercase;
+    letter-spacing: -2px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+p, h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: var(--color4);
+    text-decoration: none; 
+}
+
+/* 3) Selector de estilo de tipo ID */
+#cabecera {
+   background-color: var(--color4); 
+   color: var(--color1);
+
+   padding-top: 20px;
+   padding-bottom: 20px;
+
+   /* Aplicando posicionamiento pegajoso */
+   position: sticky;
+   top: 0px;
+}
+
+#nosotros {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+#Lunes-de-hotmins image {
+    box-shadow: 0 15px 20px 0 rgba(32, 54, 70, 0.5);
+}
+
+
+
+#eventos {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+#alumnos .columna {
+    border: var(--color1) 1px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 15px;
+    border-radius: 10px;
+}
+
+#alumnos img {
+    /* box-shadow: 11px -11px 17px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 11px -11px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px -11px 17px 0px rgba(0,0,0,0.75); */
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+    margin-bottom: 20px;
+}
+
+#pie {
+    background-color: var(--color5);
+    color: var(--color4);
+}
+
+
+#pie .fila {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pie i {
+    font-size: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+/* 4) Selector de estilo de tipo CLASS */
+.espaciado {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contenedor {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fila {
+    display: flex;  /* Activa Flexbox */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.columna25 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.columna33 {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+
+.columna50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.columna66 {
+    flex-basis: 66.66%;
+    max-width: 66.66%;
+}
+
+.columna75 {
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.ajustar-ancho {
+    width: 100%;
+    height: auto;
+}
+
+
+.boton {
+    background-color: var(--color1);
+    color: var(--color4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.texto-enorme {
+    font-size: 50px;
+}
+
+.texto-resaltado {
+    color: var(--color4);
+    font-weight: 900;
+    text-shadow: 2px 2px 5px var(--color5);
+}
+
+/* Estilos para formatear los elementos de la barra de menú */
+
+.nav-logo {
+    width: 125px;
+}
+
+.nav-menu-link {
+    background-color: var(--color1);
+    color: var(--color4);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-menu-link:hover {
+    background-color: var(--color2);
+    box-shadow: -3px 3px 15px var(--color5);
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style-type: none; 
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.scroll-ir-arriba {
+    background-color: var(--color1);
+    color: var(--color4);
+    border: var(--color4) 1px solid;
+
+    width: 45px;
+    height: 45px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.scroll-ir-arriba:hover {
+    background-color: var(--color2);
+    box-shadow: -3px 3px 15px var(--color5);
+    transform: scale(110%) translateY(-5px);
+}
+
+
+.pagina-actual {
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+.eventos-foto {
+    /* Caja padre */
+    position: relative;
+}
+
+.eventos-foto-titulo {
+    /* Caja hijo */
+    position: absolute;
+    background-color: rgba(32, 54, 70, 0.7);
+    padding: 5px 10px;
+    width: 100%;
+    bottom: 0px;
+    left: calc(50% - var(--width) / 2);
+}
+
+.eventos-foto-titulo h3 {
+    margin:0px;
+}
+
+.megacombos {
+    position: relative;
+    background-image: url('imagenes/section2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 10px;
+    font-style: bold;
+    color: black;
+}
+
+.image-boxes {
+    display: flex; /* Los cuadros de imágenes estarán en una fila */
+    justify-content: space-around; /* Espacio entre los cuadros */
+    width: 100%; /* Ancho completo para ocupar la fila completa */
+}
+
+.box {
+    border: 2px solid #000;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(119, 119, 119, 0.5), rgba(170, 170, 170, 0.5));
+    color: #fff;
+}
+
+.inner-box {
+    padding: 20px;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 150px;
+    width: auto;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.box p {
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social-icon {
+    border: 2px solid black; /* Ajusta el color del borde según tus preferencias */ /* Ajusta el radio de borde según tus preferencias */
+    overflow: hidden; /* Oculta cualquier contenido que se extienda más allá del contenedor */
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: #fff;
+    display: block; /* Para que el enlace ocupe todo el espacio del contenedor */
+    padding: 10px;
+}
+
+.social-icon img {
+    width: 40px; /* Ajusta el tamaño de los iconos según tus preferencias */
+    height: 40px;
+    max-width: 100%;
+}
+
+.ajustar-mapa{
+    width: 100%;
+    }
+
+.formulario-postulantes a {
+    color: var(--color1);
+}
+
+.formulario-postulantes h3 {
+    background-color: var(--color1);
+    color: var(--color4);
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.campo-entrada {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font: inherit;
+    border: none;
+    outline: none;
+    border-bottom: var(--color1) 1px solid;
+}
+
+.boton-enviar {
+    width: 100%;
+    padding: 20px 0px;
+    font: inherit;
+    border: none;
+    background-color: #ec3929;
+    color: var(--color4);
+    border-radius: 15px; 
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.boton-enviar:hover {
+    box-shadow: 5px 5px 10px var(--color5);
+    transform: translate(-5px);
+}
+
+/*DESDE AQUI ES EL DE NOSOTROS*/
+.overlay1 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    background-color: rgba(0, 0, 0, 0.2); /* Sombreado oscuro con opacidad */
+    padding: 15px; /* Ajusta el espacio interior del sombreado según sea necesario */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.texto-overlay1 {
+    color: black; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para la sección 2 (Nuestros Trabajadores) */
+#seccion2 .fila {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Compensar el margen negativo de las columnas */
+}
+
+#seccion2 .columna {
+    flex-basis: calc(33.33% - 20px); /* Establece el ancho de cada columna, con un margen de 20px entre ellas */
+    margin: 10px; /* Añade margen entre las columnas */
+}
+
+@media screen and (max-width: 767px) {
+    /* Para pantallas más pequeñas, ajusta el número de columnas */
+    #seccion2 .columna {
+        flex-basis: calc(50% - 20px); /* Dos columnas por fila */
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* Para pantallas más pequeñas, ajusta el número de columnas */
+    #seccion2 .columna {
+        flex-basis: calc(100% - 20px); /* Una columna por fila */
+    }
+}
+
+#seccion2 .columna img {
+    width: 60%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    max-width: none; /* Evita la restricción del ancho máximo */
+}
+
+.image-boxes2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box2 {
+    flex-basis: calc(33.33% - 20px); /* 20px es el espacio entre las imágenes */
+    max-width: calc(33.33% - 20px); /* 20px es el espacio entre las imágenes */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.box2:hover {
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombreado oscuro con opacidad */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box2:hover .overlay {
+    display: flex; 
+    opacity: 1;
+}
+
+.texto-overlay {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box2 img {
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al zoom */
+}
+
+.box2:hover img {
+    transform: scale(1.1); /* Aplica un pequeño zoom al pasar el mouse */
+}
+/*HASTA AQUI ES EL DE NOSOTROS*/
+
+
+#redes-sociales {
+    
+    background-color: white;
+    padding: 20px 0;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-around;
+}
+
+.red-social {
+    background-color: red;
+    padding: 50px 250px 50px 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Agregado: para alinear contenido verticalmente */
+    align-items: center; /* Agregado: para alinear contenido verticalmente */
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.red-social a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* Agregado: para centrar el icono horizontalmente */
+    justify-content: center; /* Agregado: para centrar el icono horizontalmente */
+    align-items: center; /* Agregado: para centrar el icono verticalmente */
+}
+
+.red-social:hover {
+    background-color: blue; /* Color más claro al hacer hover */
+}
+
